@@ -4,7 +4,8 @@
   "description": "proba1",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
+    "build": "webpack --config ./build/webpack.build.conf.js"
   },
   "repository": {
     "type": "git",
@@ -12,6 +13,10 @@
   },
   "author": "ANV",
   "license": "MIT",
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ],
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
@@ -20,6 +25,7 @@
     "core-js": "^3.4.5",
     "css-loader": "^3.2.0",
     "file-loader": "^5.0.2",
+    "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.13.0",
@@ -37,6 +43,7 @@
     "air-datepicker": "^2.2.3",
     "git": "^0.1.5",
     "jquery": "^3.4.1",
-    "jquery-ui": "^1.12.1"
+    "jquery-ui": "^1.12.1",
+    "pug-html-loader": "^1.1.5"
   }
 }

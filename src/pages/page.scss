@@ -1,11 +1,11 @@
-@import "@material/button/mdc-button";
+/*@import "@material/button/mdc-button";
 body{
 	box-sizing:border-box;
 }
 .foo-button {
   @include mdc-button-ink-color(teal);
   @include mdc-states(teal);
-}
+}*/
 
 /*h1 {
   @include mdc-typography(headline1);
@@ -29,16 +29,16 @@ h2 {
 
 h6 {
   @include mdc-typography(headline6); 
-}
+}*/
 
 /* This sets all <p> elements with Material body1 typography styles*/
 /*p {
-  @include mdc-typography(body1);
-}*/
+  /*@include mdc-typography(body1);*/
+/*}*/
 
 /*@import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');*/
 
-$mdc-typography-family: 'Fira Sans';
+/*$mdc-typography-family: 'Fira Sans';*/
 /*Иконки */
 .icon{
 	/*color: blue;*/
