@@ -1,7 +1,7 @@
 $(document).ready(function(){
-
+		var $inc=0; 
    jQuery("#myid").html("Опять текст");
-	 $("#my").click(() => {console.log('click');
+	 $("#my").click(() => {$inc=$inc+1; console.log($inc);
 	 
 	});
 });

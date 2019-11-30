@@ -1,6 +1,6 @@
 // JS - 
 //import './js/postcss.config.js';
-//import './pages/page.js';
+import './pages/page.js';
 import $ from 'jquery';
 global.jQuery = $;
 global.$ = $;

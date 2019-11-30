@@ -20,9 +20,10 @@ module.exports = {
     paths: PATHS
   },
   entry: {
-    //page: PATHS.src
-		page: `${PATHS.src}/index.js`,
-		pg: `${PATHS.src}/pages/page.js`,
+    page: PATHS.src
+		//page: `${PATHS.src}/index.js`,
+		//pg: `${PATHS.src}/pages/page.js`,
+		
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,
@@ -42,7 +43,7 @@ module.exports = {
       loader: 'file-loader',
       options: {
 			//outputPath: `${PATHS.src}img`,
-		
+			//outputPath: `${PATHS.src}fonts`,
 			name: '[name].[ext]'
       }
     },
