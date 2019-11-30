@@ -1,0 +1,16 @@
+.body__h{
+	color:blue;
+	font-size:40px;
+	font-weight:bold;
+}
+/* Import your theme variables
+@import "my-theme";*/
+
+/* Import MDC Web components*/
+@import "@material/typography/mdc-typography";
+@import "@material/button/mdc-button";
+
+/* Import your components for your application
+@import "my-components"; */
+
+@import 'pages/page';

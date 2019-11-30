@@ -1,0 +1,101 @@
+.foo-button.mdc-button
+	Button BUTTON
+br
+.foo-button.mdc-button Button
+br
+.foo-button.mdc-button
+	b BUTTON
+br
+.mdc-button.mdc-button--raised
+	World World
+	
+
+span
+	.mdc-button
+		.mdc-button__ripple
+		.mdc-button__label Hello World
+	
+<!-- import the Material javascript file -->	
+script(src='dist/js/page.js' async)
+br
+br
+.mdc-button.mdc-button--raised
+	b World
+br
+br
+.mdc-button.mdc-button--raised World
+br
+.mdc-button
+	span
+		.mdc-button__label 			Button
+br
+<!-- Иконки из dist-->
+img(src='img/expand_more-24px.svg' width='20' height='20' alt='image SVG')
+img(src='img/outline_expand_more_black_24dp.png' width='20' height='20' alt='image PNG')
+br
+object(type='image/svg+xml' data='img/expand_more-24px.svg' width='20rem' height='20rem' class='icon')
+br
+object(type='image/svg+xml' data='img/expand_more-24px.svg' width='20rem' height='20rem')
+br
+embed(src='img/expand_more-24px.svg' alt='text' height="20" width="20")
+<!-- Текстовое поле-->
+include ../lib/fields/_Text_fields
+include ../lib/fields/_Field_text
+br
+br
+include ../lib/fields/_Field_date
+br
+br
+include ../lib/fields/_FieldText_masked
+br
+br
+include ../lib/fields/FieldText_dropdown/_FieldText_dropdown
+
+br
+input(type='text' placeholder='Проба' list='idContent1')
+datalist(id='idContent1')
+					option(value='Первая строка')
+					option(value='Вторая строка')
+br
+br
+br
+select(size="1" name="hero[]")
+	option(disabled value='Выберите героя') Выберите героя
+	option(value="Чебурашка") Чебурашка
+	option(value="Крокодил Гена") Крокодил Гена
+//<option value="Шапокляк">Шапокляк</option>
+//<option value="Крыса Лариса">Крыса Лариса</option>
+br
+br
+//Счетчик
+
+//script(async src="dist/js/page.js")
+button(id='My' onclick='ClickMy()')
+
+br
+br
+p(id='myid') Проба
+document.getElementByld('myid').innerHTML="Новый текст"
+//script(src="dist/js/page.js")
+//script(src="page.js")
+script(src="./pages/page.js")
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br

@@ -1,0 +1,9 @@
+@mixin StyleText($family, $stretch, $weight, $size, $line){
+	font-style:normal;
+	/*color:#1F2041;*/
+	font-family:$family;
+	font-stretch:$stretch;
+	font-weight:$weight;
+	font-size:$size;
+	line-height:$line;
+}

@@ -1,0 +1,7 @@
+@import './lib/_fonts';
+@import './lib/_var';
+/*Меняется цет и шрифт текста заполнителя*/
+::-webkit-input-placeholder{
+	color:$DarkShade25;
+	font-family:'Montserrat';	
+}

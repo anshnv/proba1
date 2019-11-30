@@ -1,0 +1,13 @@
+@import './lib/_var';
+@import './lib/_fonts';
+input[name="Field_button_large"]{
+	width:$FieldLarge-buttonWidth;
+	box-sizing:border-box;
+	height:$Field-buttonHeight;
+	margin-top:1px;
+	border-radius:$Border-radius 0rem 0rem $Border-radius;	
+	border:0px solid $DarkShade25;
+	background-color:$PageBackground;
+	/*font-family:Montserrat; /*Стиль шрифта*/
+	
+}

@@ -1,0 +1,78 @@
+@import "@material/button/mdc-button";
+body{
+	box-sizing:border-box;
+}
+.foo-button {
+  @include mdc-button-ink-color(teal);
+  @include mdc-states(teal);
+}
+
+/*h1 {
+  @include mdc-typography(headline1);
+}
+
+h2 {
+  @include mdc-typography(headline2); 
+}
+
+/*h3 {
+  @include mdc-typography(headline3); 
+}*/
+
+/*h4 {
+  @include mdc-typography(headline4); 
+}*/
+
+/*h5 {
+  @include mdc-typography(headline5); 
+}
+
+h6 {
+  @include mdc-typography(headline6); 
+}
+
+/* This sets all <p> elements with Material body1 typography styles*/
+/*p {
+  @include mdc-typography(body1);
+}*/
+
+/*@import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');*/
+
+$mdc-typography-family: 'Fira Sans';
+/*Иконки */
+.icon{
+	/*color: blue;*/
+	background-color: red;
+}
+/*#my-icon-expan{
+   stroke: blue;
+	 fill: green;
+}*/
+/*Текстовое поле*/
+@import './lib/fields/_Text_fields';
+@import './lib/fields/_Field_text';
+@import './lib/fields/_Field_date';
+@import './lib/fields/_FieldText_masked';
+@import './lib/fields/FieldText_dropdown/_FieldText_dropdown';
+/*@import './lib/fields/FieldText_dropdown/_mixFieldText_dropdown__content';*/
+/*@import './lib/_var';*/
+
+select{
+	width: $FieldTextWidth;
+}
+option{
+	color: red;/*$DarkShade75;*/
+	background: blue;
+	width: $FieldTextWidth;
+}
+option::-ms-value {
+    color: red;
+    background: black;
+    
+}
+/*Счетчик*/
+
+
+
+
+

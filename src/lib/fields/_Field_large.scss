@@ -1,0 +1,14 @@
+@import './lib/_var';
+@import './lib/fields/_Input';
+input[name="Field_large"]{
+	width:$FieldTextWidth;
+	border-radius:$Border-radius;
+}
+input[name="Field_large"]:hover {
+	border:1px solid $DarkShade50;
+	
+}
+input[name="Field_large"]:focus {
+	border:1px solid $DarkShade50;
+	
+}

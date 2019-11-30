@@ -1,0 +1,72 @@
+@import '_FieldText_button_large';
+
+.FieldText_dropdown__layout{
+	display:flex;
+	flex-direction:row;
+	/*background: grey;*/
+	width:$FieldTextWidth;
+	height:$FieldTextHeight;
+	/*box-sizing:border-box;*/
+	border-radius:$Border-radius;
+	border:1px solid $DarkShade25;
+}
+.FieldText_dropdown__layout:hover{
+	border-radius:$Border-radius $Border-radius 0rem 0rem;
+}
+
+.Button_fields__layout{
+	position:relative;
+	/*background:green;*/
+}
+.expand_more{
+	position:relative;
+	z-index:5;
+	left:0.4rem;
+	top:0.3rem;
+}
+.button{
+	position:relative;
+	z-index:1;
+	top:-1.5rem;
+	/*background:red;*/
+}
+
+
+.FieldText_dropdown__content{
+	display:none;/* Скрываем содержимое */
+}
+.FieldText_dropdown__layout:hover+.FieldText_dropdown__content{
+	display:block;/* Пока курсор наведён на поле, не закрываем контент */
+	flex-direction:row;
+	width:$FieldTextWidthContent;
+	height:$FieldTextHeightContent;
+	border:1px solid $DarkShade25;
+	color:$DarkShade25;
+	box-sizing:border-box;	
+}
+
+.FieldText_dropdown__content:hover{
+	display:block;/* Пока курсор наведён на контент, не закрываем его */
+	flex-direction:row;
+	width:$FieldTextWidthContent;
+	height:$FieldTextHeightContent;
+	border:1px solid $DarkShade25;
+	color:$DarkShade25;
+	box-sizing:border-box;
+}	
+/* Изменяем границу поля */
+
+
+/* Работает только на следующие элементы
+.block .FieldText_dropdown__layout:hover ~ .content{
+	border-radius: $Border-radius $Border-radius 0rem 0rem;
+}*/
+.FieldText_dropdown__content__line{
+	display:flex;
+	flex-direction:сolumn;
+	width:$FieldTextWidthContent;
+	height:$FieldTextHeightContentLine;
+}
+
+
+

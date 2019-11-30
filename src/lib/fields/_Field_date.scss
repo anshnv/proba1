@@ -1,0 +1,18 @@
+@import './lib/fields/_Field_large';
+@import './lib/fields/_mixField';
+input[type="date"]{
+	text-transform:uppercase;
+	/*color:$DarkShade25;*/
+}
+/*Отменяется стандартные кнопки и убирает календарь у input data*/
+input::-webkit-calendar-picker-indicator,
+input::-webkit-inner-spin-button {
+	display:none;
+}
+/*input::-webkit-input-placeholder{
+	color:$DarkShade25;
+	font-family:'Montserrat';	
+}
+/*input::-webkit-datetime-edit-month-field {color: $DarkShade25;}
+input::-webkit-datetime-edit-day-field {color: $DarkShade25;}
+::-webkit-datetime-edit-year-field {color: $DarkShade25;}*/

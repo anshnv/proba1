@@ -1,0 +1,13 @@
+//include _mixFieldText_dropdown__content
+mixin FieldText_dropdown(ftype, fname, fplaceholder, ffail)
+	.FieldText_dropdown__layout
+		input(type='text' name=fname placeholder=fplaceholder)
+		.Button_fields__layout
+			.expand_more 
+				object(type='image/svg+xml' data=ffail  )
+			.button
+				button(type=ftype name='Button_fields')
+	.FieldText_dropdown__content
+		.FieldText_dropdown__content__line спальни
+		.FieldText_dropdown__content__line кровати
+		.FieldText_dropdown__content__line ванные комнаты
