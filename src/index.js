@@ -11,7 +11,7 @@ import 'jquery/dist/jquery.min.js'
 // SCSS
 import './index.scss';
 // PUG 
-import './index.pug';
+//import './index.pug';
 
 //require('jquery-ui/ui/widgets/slider');
 //$('#id').slider();

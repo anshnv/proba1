@@ -21,7 +21,8 @@ module.exports = {
   },
   entry: {
     //page: PATHS.src
-		page: `${PATHS.src}/index.js`
+		page: `${PATHS.src}/index.js`,
+		pg: `${PATHS.src}/pages/page.js`,
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,
@@ -108,8 +109,8 @@ module.exports = {
 		new HtmlWebpackPlugin({
       hash: false,
       template: `${PATHS.src}/index.html`,
-	  filename: './index.html',
-	  template:	`${PATHS.src}/index.pug`,
+			filename: './index.html',
+			template:	`${PATHS.src}/index.pug`,
       filename: 'index.html'
     }),
 		new webpack.ProvidePlugin({
