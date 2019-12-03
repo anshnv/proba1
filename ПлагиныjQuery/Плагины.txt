@@ -1,0 +1,6 @@
+https://plugins.jquery.com/validator/
+https://plugins.jquery.com/kbw.dateentry/
+https://plugins.jquery.com/shadow/
+https://plugins.jquery.com/alt-checkbox/
+https://plugins.jquery.com/dateselector/
+https://plugins.jquery.com/input/

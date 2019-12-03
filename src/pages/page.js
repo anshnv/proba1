@@ -6,15 +6,10 @@ $(document).ready(function(){
 	});
 });
 
+//import 'item-quantity-dropdown';
+//import '../../node_modules/item-quantity-dropdown';
+//import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.js';
+//import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
+//require('item-quantity-dropdown');
+//require('item-quantity-dropdown/lib/item-quantity-dropdown.css');
 
-//var inc=0;
-//var rez=0;
-//function ClickMy(){
-	//inc=inc+1;
-	//console.log(inc);
-	//alert("Клик");
-	//return inc;
-//}
-//console.log(ClickMy());
-//console.log(inc);
-//console.log(rez);

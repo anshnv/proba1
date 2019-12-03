@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
+
 //const html = require('./file.pug');
 const PATHS = {
   src: path.join(__dirname, '../src'),
@@ -104,6 +105,7 @@ module.exports = {
 ]
 },
  plugins:[
+	 
 	 new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].css`,
 	  }),
@@ -120,5 +122,6 @@ module.exports = {
       //'window.jQuery': 'jquery',
 			//'window.$': 'jquery'
     }),
+		
  ]
 }
