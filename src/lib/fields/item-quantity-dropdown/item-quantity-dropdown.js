@@ -3,7 +3,7 @@ import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
 
 $(document).ready(function() {
         
-        $('.iqdropdown').iqDropdownRoom({
+        $('.room .iqdropdown').iqDropdownRoom({
           // min total items
 					minItems: 2,
           // max total items
@@ -57,8 +57,11 @@ $(document).ready(function() {
   $.fn.iqDropdownRoom = function (options) {
     this.each(function () {
       const $this = $(this);
+			//console.log($this);
       const $selection = $this.find('p.iqdropdown-selection').last();
+			//console.log($selection);
       const $menu = $this.find('div.iqdropdown-menu');
+			//console.log($menu);
       const $items = $menu.find('div.iqdropdown-menu-option');
 			//console.log($items);//Атрибуты
 			//0: <div class="iqdropdown-menu-option" 
