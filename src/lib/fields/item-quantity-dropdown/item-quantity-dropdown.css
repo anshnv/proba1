@@ -1,0 +1,35 @@
+@import './lib/_var';
+@import './lib/_fonts';
+@import './lib/_styleText';
+/* Выпадающее меню со счетчиком*/
+
+.iqdropdown{
+	height:$FieldTextHeight !important;
+	width:$FieldTextWidth !important;
+	font-family:'Montserrat';
+	color:$DarkShade75;
+	}
+.iqdropdown-selection{
+	height:$FieldTextHeight !important;
+	width:$FieldTextWidth !important;
+	font-family:'Montserrat';
+	color:$DarkShade75;
+	}	
+.iqdropdown-menu{
+	top:0px;
+	top:$FieldTextHeight !important;
+	box-shadow:none !important;
+	border-color:$DarkShade50 !important;/*?*/
+	/*background-color:blue !important;*/
+}
+.menu-open{
+	height:$FieldTextHeight !important;
+	border-color:$DarkShade25 !important;
+}
+
+/* Выпадающее меню со счетчиком end*/
+
+
+
+
+

@@ -16,28 +16,6 @@ import './index.scss';
 //require('jquery-ui/ui/widgets/slider');
 //$('#id').slider();
 
-
-import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.js';
-import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
-$(document).ready(() => {
-	$('.iqdropdown').iqDropdown([
-		{
-  // max total items
-  maxItems: 3,
-  // min total items
-  minItems: 0,
-  // text to show on the dropdown
-  selectionText: 'Item',
-  // text to show for multiple items
-  textPlural: 'items',
-  // buttons to increment/decrement
-  controls: {
-    position: 'right',
-    displayCls: 'iqdropdown-item-display',
-    controlsCls: 'iqdropdown-item-controls',
-    counterCls: 'counter'
-  }}
-]);
-});
-
+// Выпадающее меню со счетчиком 
+import './lib/fields/item-quantity-dropdown/item-quantity-dropdown.js';
 

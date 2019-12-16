@@ -1,0 +1,12 @@
+onChange: (id, count, totalItems) => {
+      console.log(id, ' ', count, ' ', totalItems)
+      console.log(this)
+      if ((totalItems >= 5) || (totalItems === 0)) {
+        textPlural = 'гостей'
+      } else if ((totalItems > 1) && (totalItems < 5)) {
+        textPlural = 'гостя'
+      } else if (totalItems == 1) {
+        textPlural = 'гость'
+      }
+      document.querySelector('.iqdropdown-selection').innerHTML = totalItems + ' ' + textPlural
+    }
