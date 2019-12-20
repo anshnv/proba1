@@ -8,32 +8,57 @@
 	width:$FieldTextWidth !important;
 	font-family:'Montserrat';
 	color:$DarkShade75 !important;
+	.iqdropdown-menu {
+		left:0;
+		margin:-2px -1px -1px;
+		right:0;
+		/*top:$iqdropdown-height;*/
+
+		&-option {
+			justify-content:space-between;
+			height:$iqdropdown-menu-heightMy !important;
+			padding:0 5px 0 15px !important;
+    }
+
+		&-close {
+			height: $iqdropdown-close-sizeMy !important;
+			margin: 20px 0;
+			padding: 0 15px;
+			text-align: right;
+    }
+  }	
 	}
 .iqdropdown-selection{
 	height:$FieldTextHeight !important;
 	width:$FieldTextWidth !important;
 	font-family:'Montserrat' !important;
+	font-size:0.9rem !important;
 	color:$DarkShade75 !important;
-	}	
-.iqdropdown-menu{
-	//top:$FieldTextHeight !important;
-	box-shadow:none !important;
-	border-color:$DarkShade50 !important;/*?*/
-	font-family:'Montserrat-Bold' !important;
+	padding-top:0.7rem;
+	right: 0.10rem !important;;
+	/*padding-left:0.2rem;*/
 	
+	}	
+
+
+.iqdropdown-menu{
+	/*top:$FieldTextHeight !important;*/
+	box-shadow:none !important;
+	border:1px solid $DarkShade75 !important;
+	font-family:'Montserrat-Bold' !important;
+	margin: -0.56rem -0.05rem -0.05rem !important;
 	font-weight:normal !important;
 	/*background-color:blue !important;*/
 }
 .menu-open{
 	height:$FieldTextHeight !important;
-	border-color:$DarkShade25 !important;
+	
 }
 .iqdropdown .iqdropdown-item-controls{
 	display:flex;
 	height:$iqdropdown-controls-sizeMy !important;
 
 	.counter{
-		/*@include StyleText('Montserrat', ultra-condensed, normal, 0.1rem, 0.2rem);*/
 		color:$DarkShade50 !important;
 		font-family:'Montserrat-Bold' !important;
 		font-size:0.75rem !important;
@@ -44,15 +69,17 @@
   }
 
 	button{
-		align-items:center;
+		align-items:flex-end !important;
 		border:$iqdropdown-borderMy !important;
 		display:flex;
 		height:$iqdropdown-controls-sizeMy !important;
+		width:$iqdropdown-controls-sizeMy !important;
 		padding:0 20px;
 		transition:all 0.2s ease-in-out;
-
+		border: 1px solid $DarkShade50 !important;
+		
 		&:hover{
-			background-color:$iqdropdown-background-hoverMy !important;
+			/*background-color:$iqdropdown-background-hoverMy !important;*/
     }
 
 		&.button-decrement{
@@ -80,23 +107,25 @@
 	width: $iqdropdown-icon-sizeMy !important;
 
 	&::after {
-		background: $iqdropdown-icon-colorMy !important;
-		content: '';
-		display: block;
-		height: 3px;
-		position: absolute;
-		top: 6px;
-		transition: transform 0.25s ease-in-out;
-		width: $iqdropdown-icon-sizeMy !important;
+		/*background: $iqdropdown-icon-colorMy !important;*/
+		content:'';
+		display:block;
+		height:$iqdropdown-icon-sizeMy !important;
+		position:absolute;
+		top:0px !important;
+		left:-0.7rem;
+		transition:transform 0.25s ease-in-out;
+		width:$iqdropdown-icon-sizeMy !important;
   }
 
 	&.icon-increment::before {
-		background: $iqdropdown-icon-colorMy !important;
+		/*background: $iqdropdown-icon-colorMy !important;*/
 		content: '';
 		display: block;
-		height: 3px;
+		height: $iqdropdown-icon-sizeMy !important;
 		position: absolute;
-		top: 6px;
+		top: 0px !important;
+		left:-0.7rem;
 		transform: rotate(90deg);/*поорот на 90 градусов*/
 		transition: transform 0.25s ease-in-out;/*устанавлиает эффект между двумя состояниями*/
 		width: $iqdropdown-icon-sizeMy !important;
