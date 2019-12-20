@@ -17,5 +17,5 @@ import './index.scss';
 //$('#id').slider();
 
 // Выпадающее меню со счетчиком 
-import './lib/fields/item-quantity-dropdown/item-quantity-dropdown.js';
+import './lib/fields/item-quantity-dropdown/item-quantity-dropdownRoom.js';
 

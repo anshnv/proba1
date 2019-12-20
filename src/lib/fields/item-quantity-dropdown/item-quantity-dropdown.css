@@ -7,25 +7,102 @@
 	height:$FieldTextHeight !important;
 	width:$FieldTextWidth !important;
 	font-family:'Montserrat';
-	color:$DarkShade75;
+	color:$DarkShade75 !important;
 	}
 .iqdropdown-selection{
 	height:$FieldTextHeight !important;
 	width:$FieldTextWidth !important;
-	font-family:'Montserrat';
-	color:$DarkShade75;
+	font-family:'Montserrat' !important;
+	color:$DarkShade75 !important;
 	}	
 .iqdropdown-menu{
-	top:0px;
-	top:$FieldTextHeight !important;
+	//top:$FieldTextHeight !important;
 	box-shadow:none !important;
 	border-color:$DarkShade50 !important;/*?*/
+	font-family:'Montserrat-Bold' !important;
+	
+	font-weight:normal !important;
 	/*background-color:blue !important;*/
 }
 .menu-open{
 	height:$FieldTextHeight !important;
 	border-color:$DarkShade25 !important;
 }
+.iqdropdown .iqdropdown-item-controls{
+	display:flex;
+	height:$iqdropdown-controls-sizeMy !important;
+
+	.counter{
+		/*@include StyleText('Montserrat', ultra-condensed, normal, 0.1rem, 0.2rem);*/
+		color:$DarkShade50 !important;
+		font-family:'Montserrat-Bold' !important;
+		font-size:0.75rem !important;
+		font-weight:normal !important;
+		border-bottom:0px solid $iqdropdown-borderMy !important;
+		border-top:0px solid $iqdropdown-borderMy !important;
+		padding:11px 20px;
+  }
+
+	button{
+		align-items:center;
+		border:$iqdropdown-borderMy !important;
+		display:flex;
+		height:$iqdropdown-controls-sizeMy !important;
+		padding:0 20px;
+		transition:all 0.2s ease-in-out;
+
+		&:hover{
+			background-color:$iqdropdown-background-hoverMy !important;
+    }
+
+		&.button-decrement{
+			/*border-bottom-radius:$iqdropdown-radiusMy !important;*/
+			border-bottom-left-radius:$iqdropdown-radiusMy !important;
+			border-top-left-radius:$iqdropdown-radiusMy !important;
+			border-bottom-right-radius:$iqdropdown-radiusMy !important;
+			border-top-right-radius:$iqdropdown-radiusMy !important;
+    }
+
+		&.button-increment{
+			border-bottom-left-radius:$iqdropdown-radiusMy !important;
+			border-top-left-radius:$iqdropdown-radiusMy !important;
+			border-bottom-right-radius:$iqdropdown-radiusMy !important;
+			border-top-right-radius:$iqdropdown-radiusMy !important;
+    }
+  }
+}
+.iqdropdown .icon-decrement {
+	display: inline-block;
+	height: $iqdropdown-icon-sizeMy !important;
+	margin: auto;
+	min-width: $iqdropdown-icon-sizeMy !important;
+	position: relative;
+	width: $iqdropdown-icon-sizeMy !important;
+
+	&::after {
+		background: $iqdropdown-icon-colorMy !important;
+		content: '';
+		display: block;
+		height: 3px;
+		position: absolute;
+		top: 6px;
+		transition: transform 0.25s ease-in-out;
+		width: $iqdropdown-icon-sizeMy !important;
+  }
+
+	&.icon-increment::before {
+		background: $iqdropdown-icon-colorMy !important;
+		content: '';
+		display: block;
+		height: 3px;
+		position: absolute;
+		top: 6px;
+		transform: rotate(90deg);/*поорот на 90 градусов*/
+		transition: transform 0.25s ease-in-out;/*устанавлиает эффект между двумя состояниями*/
+		width: $iqdropdown-icon-sizeMy !important;
+  }
+}
+
 
 /* Выпадающее меню со счетчиком end*/
 

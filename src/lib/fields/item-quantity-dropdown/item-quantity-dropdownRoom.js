@@ -113,7 +113,7 @@ $(document).ready(function() {
 						}		
 				//Формироание текста для ключей согласно склонению-----конец
 				//console.log('usePlural', usePlural);
-				if (usePlural){$selection.html(`${ItemCount['спальни']} ${idDisplay[0]} ${ItemCount['кровати']} ${idDisplay[1]} ${ItemCount['ванные комнаты']} ${idDisplay[2]}`)} else
+				if (usePlural){$selection.html(`${ItemCount['спальни']} ${idDisplay[0]} ${ItemCount['кровати']} ${idDisplay[1]} ${' ...'}`)} else
 				 $selection.html(`${text}`);
       };
 
