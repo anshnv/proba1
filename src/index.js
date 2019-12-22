@@ -18,4 +18,5 @@ import './index.scss';
 
 // Выпадающее меню со счетчиком 
 import './lib/fields/item-quantity-dropdown/item-quantity-dropdownRoom.js';
+import './lib/fields/item-quantity-dropdown/item-quantity-dropdownGuest.js';
 
