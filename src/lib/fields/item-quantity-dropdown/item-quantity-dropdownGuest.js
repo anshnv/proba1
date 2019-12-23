@@ -11,6 +11,7 @@ $(document).ready(function() {
 					// text to show on the dropdown
           selectionText: 'гостей',
 					textPlural: 'гость',
+					textPluralDeclination:['гость','гостя','гостей'],
           items: {},
 					controls: {
 						position: 'right',
@@ -43,6 +44,7 @@ $(document).ready(function() {
     minItems: 0,
     selectionText: 'item',
     textPlural: 'items',
+		textPluralDeclination:['item','items','items'],
     controls: {
       position: 'right',
       displayCls: 'iqdropdown-content',
@@ -64,10 +66,20 @@ $(document).ready(function() {
       const settings = $.extend(true, {}, defaults, options);
       const itemCount = {};
       let totalItems = 0;
-
+			//Мои добавления ------начало
+			
+			const Declinations=settings.textPluralDeclination; //строка хранит склонения
+			//console.log('textPluralDeclination', settings.textPluralDeclination, Declinations);
+			
+			//Мои добавления ------конец
+			
       function updateDisplay () {
+				var Display;
+				Display =	(totalItems==1)?Declinations[0]:
+												((totalItems>1)&&(totalItems<5))? Declinations[1]:Declinations[2];
+				//console.log('totalItems', totalItems, 'Display', Display);
         const usePlural = totalItems !== 0 && settings.textPlural.length > 0;
-        const text = usePlural ? settings.textPlural : settings.selectionText;
+        const text = usePlural ? Display : settings.selectionText;
         $selection.html(`${totalItems} ${text}`);
       }
 

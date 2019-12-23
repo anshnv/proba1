@@ -128,7 +128,7 @@
 	
 	&::after {
 		background: $iqdropdown-icon-colorMy !important;
-		
+		height: 2px !important;/*толщина -*/
 		top:0.2rem !important;
 		left:-0.05rem;
 		width:$iqdropdown-icon-sizeMy !important;
@@ -136,6 +136,7 @@
 
 	&.icon-increment::before {
 		background: $iqdropdown-icon-colorMy !important;
+		height: 2px !important;/*толщина |*/
 		top:0.2rem !important;
 		left:-0.065rem;
 		width: $iqdropdown-icon-sizeMy !important;
