@@ -187,11 +187,11 @@ $(document).ready(function() {
       });
 //Мои добавления Снимаем обработку click с дочернего элемента------начало			
 	const $cleanButton = $('.textClean');
-			console.log('$cleanButton', $cleanButton);
+			//console.log('$cleanButton', $cleanButton);
 			$cleanButton.click(event => event.stopPropagation()); 
 			
 			const $makeButton = $('.textMake');
-			console.log('$makeButton', $makeButton);
+			//console.log('$makeButton', $makeButton);
 			$makeButton.click(event => event.stopPropagation()); 
 			
 //Мои добавления Снимаем обработку click с дочернего элемента------конец			
