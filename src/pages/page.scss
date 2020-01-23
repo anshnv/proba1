@@ -72,7 +72,5 @@ option::-ms-value {
 }
 /*Счетчик*/
 
-@import './lib/fields/item-quantity-dropdown/item-quantity-dropdown';
-
-
-
+@import './lib/fields/item-quantity-dropdown/item-quantity-dropdownRoom';
+@import './lib/fields/item-quantity-dropdown/item-quantity-dropdownGuest';

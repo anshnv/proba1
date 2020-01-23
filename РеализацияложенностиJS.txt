@@ -1,0 +1,60 @@
+Andrey Sarantsev, [25.12.19 01:48]
+Всем привет) Может кто посдкажет, как мне сделать вложенность в блок, который был выведен в блоке if? 
+Например:
+if(textBold)
+     .checkbox-item_bold=title
+else
+     .checkbox-item=title
+     ...А здесь должна быть вложенность в .checkbox-item_bold либо .checkbox-item
+
+Nikita Stefanenko, [25.12.19 02:29]
+[В ответ на Andrey Sarantsev]
+.checkbox-item(class=textBold ? .checkbox-item_bold : '')
+
+Nikita Stefanenko, [25.12.19 02:31]
+в более сложных случаях создавать миксин и делать проверку в нём
++mixin()
+  code...
+
+Andrey Sarantsev, [25.12.19 01:48]
+Всем привет) Может кто посдкажет, как мне сделать вложенность в блок, который был выведен в блоке if? 
+Например:
+if(textBold)
+     .checkbox-item_bold=title
+else
+     .checkbox-item=title
+     ...А здесь должна быть вложенность в .checkbox-item_bold либо .checkbox-item
+
+Nikita Stefanenko, [25.12.19 02:29]
+[В ответ на Andrey Sarantsev]
+.checkbox-item(class=textBold ? .checkbox-item_bold : '')
+
+Nikita Stefanenko, [25.12.19 02:31]
+в более сложных случаях создавать миксин и делать проверку в нём
++mixin()
+  code...
+
+Ilya Lokalin, [25.12.19 02:31]
+[В ответ на Andrey Sarantsev]
+Если речь о вложении после условия... нашел такой способ
+mixin testCondition(test)
+  if test
+    .box__item-title Title
+      block
+  else
+    .box__item-text Text
+      block
+      
+      
++testCondition(false)
+  .box__element Block in Text
+  
++testCondition(true)
+  .box__element Block in Title
+
+
+
+
+Увеличение на 1
+let num = +$('.plus').val();
+$('.plus').val(++num);

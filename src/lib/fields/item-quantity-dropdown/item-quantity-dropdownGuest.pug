@@ -1,10 +1,10 @@
-<!-- Выпадающее меню со счетчиком-->
+<!-- Выпадающее меню со счетчиком для гостей-->
 div.guest
 	.iqdropdown
 		p.iqdropdown-selection
 			
 		.iqdropdown-menu
-			.iqdropdown-menu-option(data-id='взрослые' data-defaultcount='0' data-mincount='0' id-declination='гость,гостя,гостей')
+			.iqdropdown-menu-option(data-id='взрослые' data-defaultcount='0' data-mincount='0')
 				p взрослые
 					
 			.iqdropdown-menu-option(data-id='дети' data-defaultcount='0' data-mincount='0') 
@@ -12,3 +12,7 @@ div.guest
 					 
 			.iqdropdown-menu-option(data-id='младенцы' data-defaultcount='0' data-mincount='0')
 				p младенцы
+				
+			//.qdropdown-menu-clean
+			button(class='textClean') ОЧИСТИТЬ
+			button(class='textMake') ПРИМЕНИТЬ

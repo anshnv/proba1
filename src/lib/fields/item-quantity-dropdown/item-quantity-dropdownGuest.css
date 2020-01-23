@@ -1,5 +1,35 @@
 @import 'item-quantity-dropdown';
 
+.textClean{
+	padding:1.1rem 8.7rem  0.82rem 0.8rem !important;
+}
+.textMake{
+	padding:0.95rem 0rem  0.2rem 0rem;
+}
+
+button{
+	font-family:'Montserrat-Bold';
+	font-size:0.75rem;
+	font-weight:normal;
+	color:$DarkShade25;
+	/*margin:auto !important;
+	padding:0.95rem 4.1rem  0.2rem 0.8rem !important;*/
+}
+.iqdropdown {
+  .iqdropdown-menu {
+		&-clean {
+			font-family:'Montserrat' !important;
+			font-size:0.9rem !important;
+			color:$DarkShade50 !important;
+			/*height:$iqdropdown-close-size;*/
+			margin:20px 10px !important;
+			padding:0.95rem 4.1rem  0.2rem 0.8rem !important;
+			text-align:right !important; /*left;*/
+			width:100%;
+    }
+	}
+	}
+
 
 
 

@@ -9,7 +9,7 @@ $(document).ready(function() {
           // max total items
 					maxItems: 20,
 					// text to show on the dropdown
-          selectionText: 'гостей',
+          selectionText: 'Сколько гостей',
 					textPlural: 'гость',
 					textPluralDeclination:['гость','гостя','гостей'],
           items: {},
@@ -66,6 +66,7 @@ $(document).ready(function() {
       const settings = $.extend(true, {}, defaults, options);
       const itemCount = {};
       let totalItems = 0;
+			
 			//Мои добавления ------начало
 			
 			const Declinations=settings.textPluralDeclination; //строка хранит склонения
@@ -80,7 +81,11 @@ $(document).ready(function() {
 				//console.log('totalItems', totalItems, 'Display', Display);
         const usePlural = totalItems !== 0 && settings.textPlural.length > 0;
         const text = usePlural ? Display : settings.selectionText;
-        $selection.html(`${totalItems} ${text}`);
+				if (totalItems!== 0){
+					$selection.html(`${totalItems} ${text}`);
+					} else {
+						$selection.html(`${text}`);
+					}
       }
 
       function setItemSettings (id, $item) {
@@ -95,6 +100,7 @@ $(document).ready(function() {
 
       function addControls (id, $item) {
         const $controls = $('<div />').addClass(settings.controls.controlsCls);
+				/* console.log('$item', $item, '$controls', $controls, 'controlsCls', settings.controls.controlsCls); */
         const $decrementButton = $(`
           <button class="button-decrement">
             <i class="icon-decrement"></i>
@@ -106,6 +112,7 @@ $(document).ready(function() {
           </button>
         `);
         const $counter = $(`<span>${itemCount[id]}</span>`).addClass(settings.controls.counterCls);
+				//console.log('$counter', $counter);
 
         $item.children('div').addClass(settings.controls.displayCls);
         $controls.append($decrementButton, $counter, $incrementButton);
@@ -145,16 +152,49 @@ $(document).ready(function() {
 
           event.preventDefault();
         });
+//Мои добавления ------начало
+				
+	/* $cleanButton.click(event => event.stopPropagation()); */
+				
+	// return $cleanButton;
+				
+				// $cleanButton.click((event) => {
+          // const { items, maxItems, beforeIncrement, onChange } = settings;
+          //const allowClick = beforeIncrement(id, itemCount);
+
+          //if (totalItems !== 0 && itemCount[id] < items[id].maxCount) {
+           // itemCount[id] = 0;
+            ////totalItems += 1;
+            //$counter.html(itemCount[id]);
+           // updateDisplay();
+            //onChange(id, itemCount[id], totalItems);
+         // }
+
+         // event.preventDefault();
+        //});
+				
+//Мои добавления ------конец
 
         $item.click(event => event.stopPropagation());
-
+				
         return $item;
+			
+				
       }
-
+// Открывает или закрывает меню (добавляет или удаляет класс)
       $this.click(() => {
         $this.toggleClass('menu-open');
       });
-
+//Мои добавления Снимаем обработку click с дочернего элемента------начало			
+	const $cleanButton = $('.textClean');
+			console.log('$cleanButton', $cleanButton);
+			$cleanButton.click(event => event.stopPropagation()); 
+			
+			const $makeButton = $('.textMake');
+			console.log('$makeButton', $makeButton);
+			$makeButton.click(event => event.stopPropagation()); 
+			
+//Мои добавления Снимаем обработку click с дочернего элемента------конец			
       $items.each(function () {
         const $item = $(this);
         const id = $item.data('id');
@@ -165,10 +205,17 @@ $(document).ready(function() {
         setItemSettings(id, $item);
         addControls(id, $item);
       });
-
+//Мои добавления ------начало
+			
+		
+//Мои добавления ------конец				
       updateDisplay();
     });
-
+		
     return this;
+		
   };
+	
 }(jQuery));
+
+    

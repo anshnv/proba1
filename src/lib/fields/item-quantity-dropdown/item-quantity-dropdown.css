@@ -51,26 +51,24 @@
     }*/
 .iqdropdown.menu-open {
    .iqdropdown-selection::after {
-    background-image: url('./img/expand+more+24px.png') !important;
+    /*background-image: url('./img/expand+more+24px.png') !important;*/
     }
   }	
 	
 	.iqdropdown-selection::after {
-	background-image: url('./img/expand+more+24px.png') !important;
+	/*background-image: url('./img/expand+more+24px.png') !important;*/
     }	
 	}	
 
 
 .iqdropdown-menu{
-	/*top:$FieldTextHeight !important;*/
 	box-shadow:none !important;
 	border:1px solid $DarkShade25 !important;
 	font-family:'Montserrat' !important;
 	color:$DarkShade100 !important;
 	margin: -0.56rem -0.05rem -0.05rem !important;
 	font-weight:normal !important;
-	/*background-color:blue !important;*/
-}
+	}
 .menu-open{
 	height:$FieldTextHeight !important;
 	
@@ -89,22 +87,21 @@
 		padding:0.55rem 0.85rem !important;
   }
 
-	button{
-		align-items:flex-end !important;
-		border:$iqdropdown-borderMy !important;
-		display:flex;
-		height:$iqdropdown-controls-sizeMy !important;
-		width:$iqdropdown-controls-sizeMy !important;
-		padding:0 0px !important;/*круглые*/
-		transition:all 0.2s ease-in-out;
-		border: 1px solid $DarkShade25 !important;
-		
+
+button{
+	align-items:flex-end !important;
+	border:$iqdropdown-borderMy !important;
+	display:flex;
+	height:$iqdropdown-controls-sizeMy !important;
+	width:$iqdropdown-controls-sizeMy !important;
+	padding:0px 0px !important;/*круглые*/
+	border: 1px solid $DarkShade25 !important;
+	/*color:$DarkShade25;	*/
 		&:hover{
-			/*background-color:$iqdropdown-background-hoverMy !important;*/
+			background-color:$iqdropdown-background-hoverMy !important;
     }
 
 		&.button-decrement{
-			/*border-bottom-radius:$iqdropdown-radiusMy !important;*/
 			border-bottom-left-radius:$iqdropdown-radiusMy !important;
 			border-top-left-radius:$iqdropdown-radiusMy !important;
 			border-bottom-right-radius:$iqdropdown-radiusMy !important;
