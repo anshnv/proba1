@@ -131,7 +131,7 @@ $(document).ready(function() {
             itemCount[id] -= 1;
             totalItems -= 1;
             $counter.html(itemCount[id]);
-            updateDisplay();
+            //updateDisplay();//Не отображаем изменение количества гостей на экране
             onChange(id, itemCount[id], totalItems);
           }
 
@@ -146,34 +146,12 @@ $(document).ready(function() {
             itemCount[id] += 1;
             totalItems += 1;
             $counter.html(itemCount[id]);
-            updateDisplay();
+            //updateDisplay(); //Не отображаем изменение количества гостей на экране
             onChange(id, itemCount[id], totalItems);
           }
 
           event.preventDefault();
         });
-//Мои добавления ------начало
-				
-	/* $cleanButton.click(event => event.stopPropagation()); */
-				
-	// return $cleanButton;
-				
-				// $cleanButton.click((event) => {
-          // const { items, maxItems, beforeIncrement, onChange } = settings;
-          //const allowClick = beforeIncrement(id, itemCount);
-
-          //if (totalItems !== 0 && itemCount[id] < items[id].maxCount) {
-           // itemCount[id] = 0;
-            ////totalItems += 1;
-            //$counter.html(itemCount[id]);
-           // updateDisplay();
-            //onChange(id, itemCount[id], totalItems);
-         // }
-
-         // event.preventDefault();
-        //});
-				
-//Мои добавления ------конец
 
         $item.click(event => event.stopPropagation());
 				
@@ -185,17 +163,35 @@ $(document).ready(function() {
       $this.click(() => {
         $this.toggleClass('menu-open');
       });
-//Мои добавления Снимаем обработку click с дочернего элемента------начало			
+//Мои добавления ------начало
+//Снимаем обработку click с дочернего элемента			
 	const $cleanButton = $('.textClean');
 			//console.log('$cleanButton', $cleanButton);
-			$cleanButton.click(event => event.stopPropagation()); 
+			$cleanButton.click(event => event.stopPropagation());
+			//Добавляем новый обработчик для cleanButton
+		$cleanButton.on('click', function(){
+			totalItems = 0;
+			//console.log('itemCount', itemCount);
+			$items.each(function () {
+        const $item = $(this);
+        const id = $item.data('id');
+        
+        itemCount[id] = 0;
+				$('span').html(itemCount[id]);//Отображает значение
+        });
 			
-			const $makeButton = $('.textMake');
+			updateDisplay();
+			
+			//console.log('totalItems', totalItems, 'itemCount', itemCount);
+		});			
+//Добавляем новый обработчик для makeButton			
+const $makeButton = $('.textMake');
 			//console.log('$makeButton', $makeButton);
 			$makeButton.click(event => event.stopPropagation()); 
+			$makeButton.on('click', function(){updateDisplay();});
 			
-//Мои добавления Снимаем обработку click с дочернего элемента------конец			
-      $items.each(function () {
+//Мои добавления------конец
+				$items.each(function () {
         const $item = $(this);
         const id = $item.data('id');
         const defaultCount = Number($item.data('defaultcount') || '0');
@@ -205,10 +201,7 @@ $(document).ready(function() {
         setItemSettings(id, $item);
         addControls(id, $item);
       });
-//Мои добавления ------начало
 			
-		
-//Мои добавления ------конец				
       updateDisplay();
     });
 		
