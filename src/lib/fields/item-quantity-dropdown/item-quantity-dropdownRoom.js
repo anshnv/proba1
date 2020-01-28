@@ -138,6 +138,15 @@ $(document).ready(function() {
             <i class="icon-decrement icon-increment"></i>
           </button>
         `);
+				
+				//Мои добавления Замена иконки в button-increment----начало
+				$($incrementButton).html('+').css({'color':'rgba(31, 32, 65, 0.50)','font-size':'1rem','display':'inline-block'});
+				//Мои добавления----конец
+				
+				//Мои добавления Замена иконки в button-decrement----начало
+				$($decrementButton).html('-').css({'color':'rgba(31, 32, 65, 0.05)','font-size':'1rem','display':'inline-block'});
+				//Мои добавления----конец
+				
         const $counter = $(`<span>${itemCount[id]}</span>`).addClass(settings.controls.counterCls);
 
         $item.children('div').addClass(settings.controls.displayCls);
@@ -153,17 +162,25 @@ $(document).ready(function() {
           const { items, minItems, beforeDecrement, onChange } = settings;
           const allowClick = beforeDecrement(id, itemCount);
 					//console.log('-items', items, 'id', id, 'items[id]', items[id],'allowClick', allowClick, 'totalItems', totalItems, 'minItems', minItems, 'itemCount[id]', itemCount[id]);
-          if (allowClick && totalItems > minItems && itemCount[id] > items[id].minCount) {
+					if (allowClick && totalItems > minItems && itemCount[id] > items[id].minCount) {
             itemCount[id] -= 1;
             totalItems -= 1;
-            $counter.html(itemCount[id]);
+						$counter.html(itemCount[id]);
+						
+//Мои добавления----начало
+						//Изменение цвета кнопки decrement----начало
+						if(itemCount[id]==items[id].minCount){						
+						$("div[data-id = '" +id+ "'] .button-decrement").css({'border':'1px solid rgba(31, 32, 65, 0.05)'});
+						
+						$($decrementButton).css({'color':'rgba(31, 32, 65, 0.05)'});
+						};
+						//Изменение цвета кнопки decrement----конец
+//Мои добавления----конец
 						var count=itemCount[id];
 						//console.log('-id', id);
-					  updateDisplay(id, idDeclinationArray, count, itemCount);
+						updateDisplay(id, idDeclinationArray, count, itemCount);
             onChange(id, itemCount[id], totalItems);
-						
-						
-          }
+					}
 
           event.preventDefault();
         });
@@ -176,8 +193,23 @@ $(document).ready(function() {
             itemCount[id] += 1;
             totalItems += 1;
 						$counter.html(itemCount[id]);
+						
+//Мои добавления----начало
+						//Изменение цвета кнопки decrement----начало
+												
+						$("div[data-id = '" +id+ "'] .button-decrement").css({'border':'1px solid rgba(31, 32, 65, 0.5)'});
+						
+						/* $("div[data-id = '" +id+ "'] .icon-decrement").css({'color':'rgba(31, 32, 65, 0.50)'}); */
+						
+						$($decrementButton).css({'color':'rgba(31, 32, 65, 0.50)'});
+						
+						//Изменение цвета кнопки decrement----конец
+//Мои добавления----конец
+						
 						var count=itemCount[id]
 						//console.log('+id', id, 'count', count);
+						
+						
 						updateDisplay(id, idDeclinationArray, count, itemCount);
             onChange(id, itemCount[id], totalItems);
 						

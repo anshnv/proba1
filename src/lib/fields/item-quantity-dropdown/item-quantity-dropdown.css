@@ -22,8 +22,6 @@
 	border:1px solid $DarkShade25 !important;
 	height:$FieldTextHeight !important;
 	width:$FieldTextWidth !important;
-	font-family:'Montserrat' !important;
-	color:$DarkShade75 !important;
 	.iqdropdown-menu {
 		
 		&-option {
@@ -82,26 +80,26 @@
 		font-family:'Montserrat-Bold' !important;
 		font-size:0.75rem !important;
 		font-weight:normal !important;
-		border-bottom:0px solid $iqdropdown-borderMy !important;
-		border-top:0px solid $iqdropdown-borderMy !important;
+		border-bottom:0px solid $iqdropdown-borderMy75 !important;
+		border-top:0px solid $iqdropdown-borderMy75 !important;
 		padding:0.55rem 0.85rem !important;
   }
 
 
 button{
 	align-items:flex-end !important;
-	border:$iqdropdown-borderMy !important;
 	display:flex;
 	height:$iqdropdown-controls-sizeMy !important;
 	width:$iqdropdown-controls-sizeMy !important;
 	padding:0px 0px !important;/*круглые*/
-	border: 1px solid $DarkShade25 !important;
+	/* border: 1px solid $DarkShade50 !important; */
 	/*color:$DarkShade25;	*/
 		&:hover{
 			background-color:$iqdropdown-background-hoverMy !important;
     }
 
 		&.button-decrement{
+			border: 1px solid $DarkShade05;
 			border-bottom-left-radius:$iqdropdown-radiusMy !important;
 			border-top-left-radius:$iqdropdown-radiusMy !important;
 			border-bottom-right-radius:$iqdropdown-radiusMy !important;
@@ -109,6 +107,7 @@ button{
     }
 
 		&.button-increment{
+			border: 1px solid $DarkShade50 !important;
 			border-bottom-left-radius:$iqdropdown-radiusMy !important;
 			border-top-left-radius:$iqdropdown-radiusMy !important;
 			border-bottom-right-radius:$iqdropdown-radiusMy !important;
@@ -124,20 +123,13 @@ button{
 	/*font-style:normal !important;*/
 	
 	&::after {
-		background: $iqdropdown-icon-colorMy !important;
+		background: $DarkShade05 !important;
 		height: 2px !important;/*толщина -*/
 		top:0.2rem !important;
 		left:-0.05rem;
 		width:$iqdropdown-icon-sizeMy !important;
   }
-
-	&.icon-increment::before {
-		background: $iqdropdown-icon-colorMy !important;
-		height: 2px !important;/*толщина |*/
-		top:0.2rem !important;
-		left:-0.065rem;
-		width: $iqdropdown-icon-sizeMy !important;
-  }
+	
 }
 
 

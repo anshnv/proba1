@@ -113,6 +113,10 @@ $(document).ready(function() {
         `);
         const $counter = $(`<span>${itemCount[id]}</span>`).addClass(settings.controls.counterCls);
 				//console.log('$counter', $counter);
+				
+				//Мои добавления----начало
+				$($incrementButton).html('+').css({'color':'rgba(31, 32, 65, 0.50)','font-size':'1rem','display':'inline-block'});
+				//Мои добавления----конец
 
         $item.children('div').addClass(settings.controls.displayCls);
         $controls.append($decrementButton, $counter, $incrementButton);
