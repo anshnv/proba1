@@ -1,9 +1,10 @@
 @import 'item-quantity-dropdown';
 
-.textClean{
+.iqdropdownGuest-textClean{
 	padding:1.1rem 8.7rem  0.82rem 0.8rem !important;
+	color:$DarkShade05;
 }
-.textMake{
+.iqdropdownGuest-textMake{
 	padding:0.95rem 0rem  0.2rem 0rem;
 }
 

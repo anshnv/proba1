@@ -67,12 +67,12 @@ $(document).ready(function() {
       const itemCount = {};
       let totalItems = 0;
 			
-			//Мои добавления ------начало
+//Мои добавления ------начало
 			
 			const Declinations=settings.textPluralDeclination; //строка хранит склонения
 			//console.log('textPluralDeclination', settings.textPluralDeclination, Declinations);
 			
-			//Мои добавления ------конец
+//Мои добавления ------конец
 			
       function updateDisplay () {
 				var Display;
@@ -111,12 +111,21 @@ $(document).ready(function() {
             <i class="icon-decrement icon-increment"></i>
           </button>
         `);
+				
+//Мои добавления Замена иконки в button-increment----начало
+				$($incrementButton).html('+').css({'color':'rgba(31, 32, 65, 0.50)','font-size':'1rem','display':'inline-block'});
+				//Мои добавления----конец
+				
+				//Мои добавления Замена иконки в button-decrement----начало
+				$($decrementButton).html('-').css({'color':'rgba(31, 32, 65, 0.05)','font-size':'1rem','display':'inline-block'});
+//Мои добавления----конец
+				
         const $counter = $(`<span>${itemCount[id]}</span>`).addClass(settings.controls.counterCls);
 				//console.log('$counter', $counter);
 				
-				//Мои добавления----начало
+//Мои добавления----начало
 				$($incrementButton).html('+').css({'color':'rgba(31, 32, 65, 0.50)','font-size':'1rem','display':'inline-block'});
-				//Мои добавления----конец
+//Мои добавления----конец
 
         $item.children('div').addClass(settings.controls.displayCls);
         $controls.append($decrementButton, $counter, $incrementButton);
@@ -135,6 +144,18 @@ $(document).ready(function() {
             itemCount[id] -= 1;
             totalItems -= 1;
             $counter.html(itemCount[id]);
+						
+//Мои добавления----начало
+						//Изменение цвета кнопки decrement----начало
+						if(itemCount[id]==items[id].minCount){						
+						$("div[data-id = '" +id+ "'] .button-decrement").css({'border':'1px solid rgba(31, 32, 65, 0.05)'});
+						
+						$($decrementButton).css({'color':'rgba(31, 32, 65, 0.05)'});
+						};
+						
+																		$('.iqdropdownGuest-textClean').css({'color':'rgba(31, 32, 65, 0.050)'});
+						//Изменение цвета кнопки decrement----конец
+//Мои добавления----конец						
             //updateDisplay();//Не отображаем изменение количества гостей на экране
             onChange(id, itemCount[id], totalItems);
           }
@@ -150,6 +171,18 @@ $(document).ready(function() {
             itemCount[id] += 1;
             totalItems += 1;
             $counter.html(itemCount[id]);
+						
+//Мои добавления----начало
+						//Изменение цвета кнопки decrement----начало
+												
+						/* $("div[data-id = '" +id+ "'] .button-decrement").css({'border':'1px solid rgba(31, 32, 65, 0.5)'}); */
+						
+						$($decrementButton).css({'color':'rgba(31, 32, 65, 0.50)','border':'1px solid rgba(31, 32, 65, 0.5)'});
+						
+						$('.iqdropdownGuest-textClean').css({'color':'rgba(31, 32, 65, 0.50)'});
+						
+						//Изменение цвета кнопки decrement----конец
+//Мои добавления----конец						
             //updateDisplay(); //Не отображаем изменение количества гостей на экране
             onChange(id, itemCount[id], totalItems);
           }
@@ -169,7 +202,7 @@ $(document).ready(function() {
       });
 //Мои добавления ------начало
 //Снимаем обработку click с дочернего элемента			
-	const $cleanButton = $('.textClean');
+	const $cleanButton = $('.iqdropdownGuest-textClean');
 			//console.log('$cleanButton', $cleanButton);
 			$cleanButton.click(event => event.stopPropagation());
 			//Добавляем новый обработчик для cleanButton
@@ -183,13 +216,14 @@ $(document).ready(function() {
         itemCount[id] = 0;
 				$('span').html(itemCount[id]);//Отображает значение
         });
-			
+				$('.button-decrement').css({'color':'rgba(31, 32, 65, 0.050)','border':'1px solid rgba(31, 32, 65, 0.05)'});
+			$('.iqdropdownGuest-textClean').css({'color':'rgba(31, 32, 65, 0.050)'});
 			updateDisplay();
 			
 			//console.log('totalItems', totalItems, 'itemCount', itemCount);
 		});			
 //Добавляем новый обработчик для makeButton			
-const $makeButton = $('.textMake');
+const $makeButton = $('.iqdropdownGuest-textMake');
 			//console.log('$makeButton', $makeButton);
 			$makeButton.click(event => event.stopPropagation()); 
 			$makeButton.on('click', function(){updateDisplay();});

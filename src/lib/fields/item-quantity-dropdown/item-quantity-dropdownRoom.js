@@ -70,7 +70,7 @@ $(document).ready(function() {
 								//data-mincount="1" 
 								//id-declination="спальня,спальни,спален" - моё добавление
 			
-			//Мои добавления ------начало
+//Мои добавления ------начало
 			const dataId=[];//массив строк, хранит ключи
 			const idDeclination=[];//массив строк, элемент хранит строку склонения каждого элемента меню
 			const idDeclinationArray=[];//2-мерный массив строк, строки склонения превращены в массивы
@@ -89,7 +89,7 @@ $(document).ready(function() {
 				//console.log('i', i, 'idDeclinationArray[i]', idDeclinationArray[i]);	
 			};
 			var idDisplay=['спальня','кровать','ванных комнат'] ;	// элемент массива содержит текст для ключа согласно склонению	
-			//Мои добавления ------конец
+//Мои добавления ------конец
 			
       const settings = $.extend(true, {}, defaults, options);//опции
       const itemCount = {};//ассоциативный массив {'спальни':1,'кровати':2,'ванные комнаты':0}
@@ -145,7 +145,7 @@ $(document).ready(function() {
 				
 				//Мои добавления Замена иконки в button-decrement----начало
 				$($decrementButton).html('-').css({'color':'rgba(31, 32, 65, 0.05)','font-size':'1rem','display':'inline-block'});
-				//Мои добавления----конец
+//Мои добавления----конец
 				
         const $counter = $(`<span>${itemCount[id]}</span>`).addClass(settings.controls.counterCls);
 
@@ -197,11 +197,9 @@ $(document).ready(function() {
 //Мои добавления----начало
 						//Изменение цвета кнопки decrement----начало
 												
-						$("div[data-id = '" +id+ "'] .button-decrement").css({'border':'1px solid rgba(31, 32, 65, 0.5)'});
+						/* $("div[data-id = '" +id+ "'] .button-decrement").css({'border':'1px solid rgba(31, 32, 65, 0.5)'}); */
 						
-						/* $("div[data-id = '" +id+ "'] .icon-decrement").css({'color':'rgba(31, 32, 65, 0.50)'}); */
-						
-						$($decrementButton).css({'color':'rgba(31, 32, 65, 0.50)'});
+						$($decrementButton).css({'color':'rgba(31, 32, 65, 0.50)','border':'1px solid rgba(31, 32, 65, 0.5)'});
 						
 						//Изменение цвета кнопки decrement----конец
 //Мои добавления----конец
