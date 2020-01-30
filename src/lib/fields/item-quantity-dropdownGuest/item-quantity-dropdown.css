@@ -1,6 +1,6 @@
-@import './lib/_var';
-@import './lib/_fonts';
-@import './lib/_styleText';
+@import '_var-dropdown';
+@import '_fonts';
+@import '_styleText';
 /* Выпадающее меню со счетчиком*/
 /*@mixin background-imageMy ($imgpath, $height, $width: 100%, $display: inline-block, $bg-size: contain, $bg-pos: center) {
   background-image: url($imgpath);

@@ -1,0 +1,19 @@
+@import '_mixStyleText';
+@import '_fonts';
+.text_H1{
+@include StyleText('Montserrat', semi-expanded, bold, 1.145rem, 1.6rem);
+}
+.text_H2{
+@include StyleText('Montserrat', ultra-expanded, bold, 0.9rem, 1.24rem);
+}
+.text_H3{
+@include StyleText('Montserrat', ultra-expanded, bold, 0.6rem, 1.24rem);
+text-transform:uppercase;
+}
+.text_H3-normal{
+@include StyleText('Montserrat', ultra-expanded, normal, 0.6rem, 1rem);
+text-transform:uppercase;
+}
+.text_body{
+@include StyleText('Montserrat', ultra-condensed, normal, 0.7rem, 1.0rem);
+}

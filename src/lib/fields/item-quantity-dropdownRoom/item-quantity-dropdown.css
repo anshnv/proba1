@@ -1,0 +1,141 @@
+@import 'var-dropdown';
+@import '_fonts';
+@import '_styleText';
+/* Выпадающее меню со счетчиком*/
+/*@mixin background-imageMy ($imgpath, $height, $width: 100%, $display: inline-block, $bg-size: contain, $bg-pos: center) {
+  background-image: url($imgpath);
+  background-position: $bg-pos;
+  background-repeat: no-repeat;
+  background-size: $bg-size;
+  content: '';
+  display: $display;
+  height: $height;
+  width: $width;
+}*/
+/*.expand_more{
+	position:relative;
+	z-index:5;
+	left:0.4rem;
+	top:0.3rem;
+}*/
+.iqdropdown{
+	border:1px solid $DarkShade25 !important;
+	height:$FieldTextHeight !important;
+	width:$FieldTextWidth !important;
+	.iqdropdown-menu {
+		
+		&-option {
+			justify-content:space-between;
+			height:$iqdropdown-menu-heightMy !important;
+			padding:0 5px 0 15px !important;
+    }
+
+		&-close {
+			height: $iqdropdown-close-sizeMy !important;
+		}
+  }	
+	}
+	
+.iqdropdown-selection{
+	height:$FieldTextHeight !important;
+	width:$FieldTextWidth !important;
+	font-family:'Montserrat' !important;
+	font-size:0.9rem !important;
+	color:$DarkShade75 !important;
+	padding-top:0.7rem;
+	right: 0.10rem !important;
+	/*&::after {
+		@include background-imageMy('./img/expand+more+24px.png', 5px, 12px);		
+    }*/
+.iqdropdown.menu-open {
+   .iqdropdown-selection::after {
+    /*background-image: url('./img/expand+more+24px.png') !important;*/
+    }
+  }	
+	
+	.iqdropdown-selection::after {
+	/*background-image: url('./img/expand+more+24px.png') !important;*/
+    }	
+	}	
+
+
+.iqdropdown-menu{
+	box-shadow:none !important;
+	border:1px solid $DarkShade25 !important;
+	font-family:'Montserrat' !important;
+	color:$DarkShade100 !important;
+	margin: -0.56rem -0.05rem -0.05rem !important;
+	font-weight:normal !important;
+	}
+.menu-open{
+	height:$FieldTextHeight !important;
+	
+}
+.iqdropdown .iqdropdown-item-controls{
+	display:flex;
+	height:$iqdropdown-controls-sizeMy !important;
+
+	.counter{
+		color:$DarkShade75 !important;
+		font-family:'Montserrat-Bold' !important;
+		font-size:0.75rem !important;
+		font-weight:normal !important;
+		border-bottom:0px solid $iqdropdown-borderMy75 !important;
+		border-top:0px solid $iqdropdown-borderMy75 !important;
+		padding:0.55rem 0.85rem !important;
+  }
+
+
+button{
+	align-items:flex-end !important;
+	display:flex;
+	height:$iqdropdown-controls-sizeMy !important;
+	width:$iqdropdown-controls-sizeMy !important;
+	padding:0px 0px !important;/*круглые*/
+	/* border: 1px solid $DarkShade50 !important; */
+	/*color:$DarkShade25;	*/
+		&:hover{
+			background-color:$iqdropdown-background-hoverMy !important;
+    }
+
+		&.button-decrement{
+			border: 1px solid $DarkShade05;
+			border-bottom-left-radius:$iqdropdown-radiusMy !important;
+			border-top-left-radius:$iqdropdown-radiusMy !important;
+			border-bottom-right-radius:$iqdropdown-radiusMy !important;
+			border-top-right-radius:$iqdropdown-radiusMy !important;
+    }
+
+		&.button-increment{
+			border: 1px solid $DarkShade50 !important;
+			border-bottom-left-radius:$iqdropdown-radiusMy !important;
+			border-top-left-radius:$iqdropdown-radiusMy !important;
+			border-bottom-right-radius:$iqdropdown-radiusMy !important;
+			border-top-right-radius:$iqdropdown-radiusMy !important;
+    }
+  }
+}
+.iqdropdown .icon-decrement {
+	
+	height: $iqdropdown-icon-sizeMy !important;
+	min-width: $iqdropdown-icon-sizeMy !important;
+	width: $iqdropdown-icon-sizeMy !important;
+	/*font-style:normal !important;*/
+	
+	&::after {
+		background: $DarkShade05 !important;
+		height: 2px !important;/*толщина -*/
+		top:0.2rem !important;
+		left:-0.05rem;
+		width:$iqdropdown-icon-sizeMy !important;
+  }
+	
+}
+
+
+/* Выпадающее меню со счетчиком end*/
+
+
+
+
+
