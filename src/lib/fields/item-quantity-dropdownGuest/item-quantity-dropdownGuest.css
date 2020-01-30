@@ -1,4 +1,4 @@
-@import 'item-quantity-dropdown';
+@import 'item-quantity-dropdownG';
 
 .iqdropdownGuest-textClean{
 	padding:1.1rem 8.7rem  0.82rem 0.8rem !important;
@@ -17,6 +17,7 @@ button{
 	padding:0.95rem 4.1rem  0.2rem 0.8rem !important;*/
 }
 .iqdropdown {
+	
   .iqdropdown-menu {
 		&-clean {
 			font-family:'Montserrat' !important;

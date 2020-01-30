@@ -1,4 +1,4 @@
-@import '_var-dropdown';
+@import '_var-dropdownRoom';
 @import '_fonts';
 @import '_styleText';
 /* Выпадающее меню со счетчиком*/
@@ -18,10 +18,12 @@
 	left:0.4rem;
 	top:0.3rem;
 }*/
+.room .iqdropdown{width:$FieldTextWidthR;}
 .iqdropdown{
 	border:1px solid $DarkShade25 !important;
 	height:$FieldTextHeight !important;
-	width:$FieldTextWidth !important;
+	/* width:$FieldMiddle-buttonWidth !important; */
+	/* width:$FieldTextWidthR !important; */
 	.iqdropdown-menu {
 		
 		&-option {

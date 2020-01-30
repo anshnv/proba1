@@ -68,7 +68,7 @@ $(document).ready(function() {
       let totalItems = 0;
 			
 //Мои добавления ------начало
-			
+			/* $('.guest .iqdropdown').css({'width':'20rem'}); */
 			const Declinations=settings.textPluralDeclination; //строка хранит склонения
 			//console.log('textPluralDeclination', settings.textPluralDeclination, Declinations);
 			
