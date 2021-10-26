@@ -47,7 +47,7 @@
     "git": "^0.1.5",
     "item-quantity-dropdown": "^2.0.2",
     "jquery": "^3.4.1",
-    "jquery-ui": "^1.12.1",
+    "jquery-ui": "^1.13.0",
     "pug-html-loader": "^1.1.5"
   }
 }
